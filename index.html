@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dharanidhar</title>
+    <style>
+        /* -------------------------resets--------------------------- */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{scroll-behavior: smooth;}
+        body{
+            height: 375vh;
+        }
+        
+        /* menu bar */
+        .head-part{
+            background-color: cornsilk;
+            /* position: sticky; */
+            /* top: 0px; */
+            position: fixed;
+            top: 0px;
+            height: 100px;
+            width: 100%;
+            border-bottom: red solid 2px;    
+            z-index: 1; 
+        }
+        ul li{
+             list-style: none;
+             margin-right: 20px;
+             font-size: 1.5rem;
+             margin-top: 30px;
+        }
+        ul{
+            display: flex;
+            margin-left: 60%;
+        }
+        li a{
+            text-decoration: none;
+            color: black;
+        }
+        li a:active{
+            color: rgba(0, 0, 0, 0.649);
+        }
+        li a:checked{
+            color: rgba(0, 0, 0, 0.8);
+        }
+        .menu-icon{
+            height: 40px;
+            width: 40px;
+            margin-left: 50px;
+            /* position: sticky; */
+            /* top: 25px; */
+            position: fixed;
+            top: 25px;
+            z-index: 2;
+            background-color: cornsilk;   
+
+        }
+        .menu-icon:hover{
+            background-color: rgb(201, 192, 156);  
+           
+            /* background-color: cornsilk;    */
+
+        }
+
+
+        /* -----------------home------------------- */
+
+
+        .home{
+            /* margin-top: 300px; */
+            height: 500px;
+            /* background-color: aqua; */
+        }
+        .myname{
+
+            font-size: 5rem;
+            margin-top: 350px;
+            position: absolute;
+            /* top: 300px; */
+            margin-left: 250px;
+        }
+        .d{
+            color: red;
+        }
+        .wd{
+            letter-spacing: 8px;
+            font-size: 1.5rem;
+            margin-left: 320px;
+            background-image: linear-gradient(red,yellow);
+            background-clip: text;
+            color: transparent;
+            position: absolute;
+            /* top: 400px; */
+            margin-top: 430px;
+        }
+        .myimg{
+            height: 600px;
+            width: 650px;
+            position: absolute;
+            left: 700px;
+            top: 100px;
+        }
+
+        /* -----------------------------about------------------------------- */
+
+        .about{
+            background-color: burlywood;
+            height: 500px;
+            /* margin-top: 170px; */
+            position: relative;
+            top: 150px;
+        }
+        .aboutme{
+            text-align: center;
+            font-size: 1.5rem;
+            text-wrap: wrap;
+            width: 800px;
+            position: absolute;
+            left: 300px;
+            top: 300px;
+        }
+        .abt{
+            /* text-align: center; */
+            /* margin:10px; */
+            position: absolute;
+            top: 200px;
+            left: 625px;
+            color: red;
+            font-size: 3rem;
+        }
+
+
+        /* ---------------------------resume--------------------- */
+        .resume{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 250px;
+        }
+
+        .res{
+            /* text-align: center; */
+            color: red;
+            position: absolute;
+            top: 1150px;
+            /* top: 1500px; */
+            left: 600px;
+            /* margin-top: 100px; */
+            padding-top: 100px;
+            font-size: 3rem;  
+
+        }
+
+       /* education */
+        .education{
+            margin-left: 50px;
+            margin-top: 100px;
+        }
+         .edu{
+            color:brown;
+            margin-left: 50px;
+        }
+
+        /* clg */
+        .clg{
+            margin-top: 20px;
+        }
+        .clg-year{
+            margin-left: 30px;
+            font-size: medium;
+            color: rgba(0, 0, 0, 0.711);
+        }
+        .clg-name{
+            margin-top: 10px;
+            color: rgba(0, 0, 0, 0.791);
+            font-weight: bold;
+        }
+        .clg-bar{
+            margin-top: 20px;
+            height: 20px;
+            width: 250px;
+            border: 1px solid black;
+            border-radius: 20px;
+            background-color: #ddd;
+        }
+        .clg-per{
+            background-color: red;
+            width: 80%;
+            height: 18px;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+        /* hsc */
+        .hsc{
+            margin-top: 20px;
+        }
+        .hsc-year{
+            margin-left: 30px;
+            font-size: medium;
+            color: rgba(0, 0, 0, 0.711);
+        }
+        .hsc-name{
+            margin-top: 10px;
+            color: rgba(0, 0, 0, 0.791);
+            font-weight: bold;
+        }
+        .hsc-bar{
+            margin-top: 20px;
+            height: 20px;
+            width: 250px;
+            border: 1px solid black;
+            border-radius: 20px;
+            background-color: #ddd;
+        }
+        .hsc-per{
+            background-color: red;
+            width: 87%;
+            height: 18px;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+        /* sslc */
+        .sslc{
+            margin-top: 20px;
+        }
+        .sslc-year{
+            margin-left: 30px;
+            font-size: medium;
+            color: rgba(0, 0, 0, 0.711);
+        }
+        .sslc-name{
+            margin-top: 10px;
+            color: rgba(0, 0, 0, 0.791);
+            font-weight: bold;
+        }
+        .sslc-bar{
+            margin-top: 20px;
+            height: 20px;
+            width: 250px;
+            border: 1px solid black;
+            border-radius: 20px;
+            background-color: #ddd;
+        }
+        .sslc-per{
+            background-color: red;
+            width: 89%;
+            height: 18px;
+            border-radius: 20px;
+            color: white;
+            text-align: center;
+            font-weight: bold;
+        }
+        /* experience */
+        .experience{
+            margin-left: 50px;
+            margin-top: 100px;
+        }
+         .exp{
+            color:brown;
+            margin-left: 50px;
+        }
+        /* experience 1 */
+        .exp1{
+            margin-top: 20px;
+        }
+        .exp1-year{
+            margin-left: 30px;
+            font-size: medium;
+            color: rgba(0, 0, 0, 0.711);
+        }
+        .exp1-desc{
+            width: 500px;
+        }
+        /* experience 2 */
+        .exp2{
+            margin-top: 20px;
+        }
+        .exp2-year{
+            margin-left: 30px;
+            font-size: medium;
+            color: rgba(0, 0, 0, 0.711);
+        }
+        .exp2-desc{
+            width: 500px;
+        }
+        /* experience 3 */
+        .exp3{
+            margin-top: 20px;
+        }
+        .exp3-year{
+            margin-left: 30px;
+            font-size: medium;
+            color: rgba(0, 0, 0, 0.711);
+        }
+        .exp3-desc{
+            width: 500px;
+        }
+        .cv{
+            width: 100px;
+            height: 24px;
+            margin-left: 650px;
+            background-color: rgba(255, 0, 0, 0.73);
+            border: none;
+            color: aliceblue;
+            font-weight: bold;
+            animation: cvani;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes cvani{
+            from{
+                position: relative;
+                top: 0;
+                /* margin-top: 0px; */
+            }
+            to{
+                position: relative;
+                top: 20px;
+                /* margin-bottom: 20px; */
+            }
+        }
+
+
+        /* -----------------skills----------------- */
+        .skills{
+            background-color: burlywood;
+            height: 500px;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 100px;
+            padding-top: 200px;
+
+        }
+        .sk{
+            color: red;
+            text-align: center;
+            position: relative;
+            top: 100px;
+            /* left: 600px; */
+            font-size: 3rem;
+            padding-top: 100px;
+        }
+        .html{
+            height: 100px;
+            width: 100px;
+            filter: grayscale(100%)
+        }
+        .html:hover{
+            filter: grayscale(0%);
+        }
+        .css{
+            height: 90px;
+            width: 90px;
+            filter: grayscale(100%)
+        }
+        .css:hover{
+            filter: grayscale(0%);
+        }
+        .js{
+            height: 100px;
+            width: 100px;
+            filter: grayscale(100%)
+        }
+        .js:hover{
+            filter: grayscale(0%);
+        }
+        .bootstrap{
+            height: 100px;
+            width: 100px;
+            filter: grayscale(100%)
+        }
+        .bootstrap:hover{
+            filter: grayscale(0%);
+        }
+        .jquery{
+            height: 100px;
+            width: 100px;
+            filter: grayscale(100%)
+        }
+        .jquery:hover{
+            filter: grayscale(0%);
+        }
+        .reactjs{
+            height: 80px;
+            width: 100px;
+            filter: grayscale(100%)
+        }
+        .reactjs:hover{
+            filter: grayscale(0%);
+        }
+        .expressjs{
+            height: 80px;
+            width: 100px;
+            filter: grayscale(100%)
+        }
+        .expressjs:hover{
+
+            filter: grayscale(0%);
+            
+        }
+        .mongodb{
+            height: 140px;
+            width: 140px;
+    
+            filter: grayscale(100%)
+        }
+        .mongodb:hover{
+            filter: grayscale(0%);
+        }
+        .nodejs{
+            height: 100px;
+            width: 100px;
+            filter: grayscale(100%)
+        }
+        .nodejs:hover{
+            filter: grayscale(0%);
+        }
+
+
+
+        /* ----------contact---------------- */
+
+        .cont{
+            font-size: 3rem;
+            color: red;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        .address{
+            background-color: rgba(0, 0, 0, 0.162);
+            text-align: center;
+            width: 250px;
+            height: 200px;
+            border-bottom: 2px solid red;
+        }
+        .address p{
+            margin-top: 50px;
+        }
+        .address:hover{
+            border-bottom: 2px solid rgb(228, 145, 36);
+            transition: 1s;
+            transform: translateY(-20px);
+        }
+
+        .phone{
+            background-color: rgba(0, 0, 0, 0.162);
+            text-align: center;
+            width: 250px;
+            height: 200px;
+            border-bottom: 2px solid red;
+        }
+        .phone p{
+            margin-top: 50px;
+        }
+        .phone:hover{
+            border-bottom: 2px solid rgb(228, 145, 36);
+            transition: 1s;
+            transform: translateY(-20px);
+        }
+        .email{
+            background-color: rgba(0, 0, 0, 0.162);
+            text-align: center;
+            width: 250px;
+            height: 200px;
+            border-bottom: 2px solid red;
+        }
+        .email p{
+            margin-top: 50px;
+        }
+        .email:hover{
+            border-bottom: 2px solid rgb(228, 145, 36);
+            transition: 1s;
+            transform: translateY(-20px);
+        }
+
+        .cflex{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 50px;
+        }
+        hr{
+            width: 100px;
+            background-color: black;
+            height: 3px;
+            margin-left: 75px;
+            
+        }
+        .social{
+            display: flex;
+            justify-content: center;
+            margin-top: 150px;
+        }
+
+        /* ---------foooter---------- */
+        .foot{
+            background-color: cornsilk;
+            padding: 30px;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 210px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- <header> -->
+        <!-- Menu Bar -->
+        <img src="menu icon.png" alt="menu" class="menu-icon" id="menu-icon" onclick="menu()">
+
+         <div class="head-part" id="head-part">
+         <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Resume">Resume</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Contact">Contact</a></li>
+         </ul>
+        </div>
+    <!-- </header> -->
+    <main>
+        <!-- Home -->
+        <div id="Home" class="home">
+
+            <h1 class="myname"> <span class="d">D</span>haranidhar</h1>
+            <p class="wd">WEB DEVELOPER</p>
+            <img src="men.png" alt="My Image" class="myimg">
+
+        </div>
+
+        <!-- About -->
+        <div id="About" class="about">
+            <h1 class="abt">About</h1>
+            <p class="aboutme">A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product. </p>
+        </div>
+
+        <!-- Resume -->
+        <h1 class="res" id="Resume">Resume</h1>
+        <div  class="resume">
+         
+            <!-- education -->
+            <div class="education">
+                <h1 class="edu">Education</h1>
+
+                <h2 class="clg">B.sc. Computer Science    <span class="clg-year">2021-2024</span></h2>
+                <p class="clg-name">National College (Autonomous) Trichy.</p>
+                <div class="clg-bar" ><div class="clg-per">80%</div></div>
+
+
+                <h2 class="hsc">HSC    <span class="hsc-year">2021</span></h2>
+                <p class="hsc-name">K.A.P. Viswanatham Higher Secondary School, Thillainagar, Trichy.</p>
+                <div class="hsc-bar" ><div class="hsc-per">87%</div></div>
+
+
+                <h2 class="sslc">SSLC    <span class="sslc-year">2019</span></h2>
+                <p class="sslc-name">K.A.P. Viswanatham Higher Secondary School, Thillainagar, Trichy.</p>
+                <div class="sslc-bar" ><div class="sslc-per">89%</div></div>
+            </div>
+            
+            <!-- experience -->
+            <div class="experience">
+                <h1 class="exp">Experience</h1>
+
+                <h2 class="exp1">Junior Web Designer <span class="exp1-year">2021-2024</span></h2>
+                <p class="exp1-desc">Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+
+
+                <h2 class="exp2">Web Developer <span class="exp2-year">2021-2024</span></h2>
+                <p class="exp2-desc">Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+
+
+                <h2 class="exp3">Senior Web Developer <span class="exp3-year">2021-2024</span></h2>
+                <p class="exp3-desc">Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+            </div>
+        </div>
+        <button class="cv">Download CV</button>
+
+
+<!-- skills -->
+ <!-- <nav  > -->
+        <h1 class="sk" id="Skills">Skills</h1>
+        <div  class="skills">
+          
+            <img src="html.png" alt="html" class="html">
+            <img src="css.png" alt="css" class="css">
+            <img src="js.png" alt="js" class="js">
+            <img src="bootstrap.png" alt="bootstrap" class="bootstrap">
+            <img src="jquery.png" alt="jquery" class="jquery">
+            <img src="react js.png" alt="reactjs" class="reactjs">
+            <img src="express-removebg-preview.png" alt="expressjs" class="expressjs">
+            <img src="mongo db.png" alt="mongodb" class="mongodb">
+            <img src="node js.png" alt="nodejs" class="nodejs">
+        </div>
+    <!-- </nav> -->
+
+
+
+        <div id="Contact">
+            <h1 class="cont">Contact</h1>
+            <div class="cflex">
+            <div class="address">
+                <img src="location.png" alt="location" height="50px" width="50px">
+                <h2>ADDRESS</h2>
+                <hr>
+                <P>25th Dubai Main Road.</P>
+            </div>
+            <div class="phone">
+                <img src="phone.png" alt="phone" height="50px" width="50px">
+                <h2>PHONE</h2>
+                <hr>
+                <p>91+ 433 434 4343</p>
+            </div>
+            <div class="email">
+                <img src="email.png" alt="email" height="50px" width="50px">
+                <h2>EMAIL</h2>
+                <hr>
+                <p>vanakam@gmail.com</p>
+            </div>
+            </div>
+            <div class="social">
+            <a href="#"><img src="fb.png" alt="fb" height="50px" width="50px"></a>
+            <a href="#"><img src="insta.png" alt="insta" height="50px" width="80px"></a>
+            <a href="#"><img src="linkedin.png" alt="lin" height="50px" width="50px"></a>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="foot">
+        <p>All Rights Reserved. &copy; 2024</p>
+    </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
